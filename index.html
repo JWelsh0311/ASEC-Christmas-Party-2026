@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASEC Christmas Party 2026</title>
+  <link rel="stylesheet" href="party.css">
+
+  <!-- Open Graph Meta Tags for Facebook Preview -->
+  <meta property="og:title" content="ASEC Christmas Party 2026">
+  <meta property="og:description" content="Join us for the ASEC Christmas Party!">
+  <meta property="og:image" content="https://raw.githubusercontent.com/JWelsh0311/ASEC-Christmas-Party-2025/main/venue.jpeg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jwelsh0311.github.io/ASEC-Christmas-Party-2025/">
+</head>
+<body>
+
+<div class="snow-container"></div>
+
+<header class="site-header">
+  <div class="header-container">
+    <img src="ASEC.jpg" alt="ASEC Logo" class="logo">
+	<h1 style="color: black; font-size:2em; margin:0;">Christmas Party 2026!</h1>
+  </div>
+</header>
+
+<main>
+  <section id="home">  
+
+<div class="flyer-container">
+<a href="https://www.caesars.com/silver-legacy-reno" target="_blank" rel="noopener noreferrer"> <img src="venue.jpg" alt="Silver Legacy Resort Casino" class="flyer-main"> </a>
+
+<p style="margin:5px 0;">
+<a href="https://www.google.com/maps/dir/?api=1&destination=407+N+Virginia+St,+Reno,+NV+89501"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#FFF; font-weight:bold; text-decoration:underline;">
+📍 Get Directions
+</a>
+</p>
+
+<section id="menu" style="text-align:center; margin:10px 0;">
+
+  <div class="tile" style="display:inline-block; max-width:480px; width:90%; margin:0 auto;">
+    <button class="collapsible">View Dinner Menu</button>
+    <div class="content" style="text-align:center;">
+      <ul style="list-style:none; padding-left:0; margin:5px 0;">       
+        <li class="menu-item">Summer Vegetable Pasta Salad</li>
+        <li class="menu-item">BBQ Chicken w/House Dry Rub</li>
+        <li class="menu-item">Smoked Pulled Pork</li>
+        <li class="menu-item">Corn Bread</li>
+		<li class="menu-item">Loaded Potatoes</li>
+        <li class="menu-item">Apple Coleslaw</li>
+        <li class="menu-item">Corn on the Cobb</li>
+		<li class="menu-item">Ranch Style Beans, Bacon</li>
+		<li class="menu-item">Assorted Gourmet Cookies</li>
+		<li class="menu-item">Brownies</li>
+		<li class="menu-item">Coffee Station</li>
+	    <li class="menu-item">Open Bar: Beer, Wine, Liquor</li>
+		<li class="menu-item" style="text-decoration: underline; font-style: italic;">Last Call 8:30PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Close the previous section (gallery) -->
+</section>
+
+<!-- RSVP section -->
+<section id="rsvp" style="text-align:center; padding-top:10px; padding-bottom:10px; margin-top:0;">
+
+<form id="rsvpForm" style="display:inline-block; text-align:center; max-width:500px; width:90%; margin-top:5px;">
+  <div class="rsvp-fields" style="display:flex; justify-content:center; flex-wrap:wrap; gap:5px; margin-bottom:5px;">
+    <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required style="flex:1 0 120px; padding:8px; max-width:180px;">
+    <input type="text" id="guestName" name="guestName" placeholder="Guest Full Name" style="flex:1 0 120px; padding:8px; max-width:180px;">
+</div>
+
+<button type="submit" class="rsvp-button">Submit RSVP</button>
+
+</form>
+
+<p id="responseMessage" style="margin-top:5px; font-weight:bold;"></p>
+</section>
+
+<footer>
+  <p>© 2026 John Welsh</p>
+</footer>
+  
+<script>
+const snowContainer = document.querySelector('.snow-container');
+const numberOfSnowflakes = 50; // adjust for heavier or lighter snowfall
+
+for (let i = 0; i < numberOfSnowflakes; i++) {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.textContent = '❄';  // you can use other unicode snowflakes too
+  snowflake.style.left = Math.random() * 100 + 'vw'; // random horizontal position
+  snowflake.style.animationDuration = 5 + Math.random() * 10 + 's'; // random speed
+  snowflake.style.fontSize = 5 + Math.random() * 15 + 'px'; // random size
+  snowContainer.appendChild(snowflake);
+}
+</script>
+  
+<script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(btn => {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+</script>
+
+<script>
+document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const responseMessage = document.getElementById("responseMessage");
+  
+  const formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbyc-cWbZzIVD_zXdAuVqDJzA7CZ5j8V7mgdZ-muPxtNQU-WSmWI3PLGOIZD92rJR5lzKA/exec", {
+    method: "POST",
+    mode: "no-cors",
+    body: new URLSearchParams(formData)
+  })
+  .then(() => {
+    responseMessage.textContent =
+      "✅ Thank you for your response!";
+    
+	form.reset();
+  })
+  .catch((error) => {
+    responseMessage.textContent =
+      "⚠️ Something went wrong. Please try again.";
+    
+	console.error(error);
+  });
+});
+</script>
+
+</body>
+</html>
