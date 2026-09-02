@@ -163,8 +163,8 @@ footer {
     position: static;      /* remove absolute positioning */
     transform: none;       /* no translate */
     display: block;        /* stack vertically */
-    width: 90%;            /* same width for all images */
-    max-width: 400px;      /* consistent max width */
+    width: 95%;            /* same width for all images */
+    max-width: 450px;      /* consistent max width */
     height: auto;          /* maintain aspect ratio */
     margin: 10px auto;     /* centered */
   }
