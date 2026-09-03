@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASEC Christmas Party 2026</title>
+  <link rel="stylesheet" href="party.css">
+
+  <!-- Open Graph Meta Tags for Facebook Preview -->
+  <meta property="og:title" content="ASEC Christmas Party 2026">
+  <meta property="og:description" content="Join us for the ASEC Christmas Party!">
+  <meta property="og:image" content="https://raw.githubusercontent.com/JWelsh0311/ASEC-Christmas-Party-2025/main/venue.jpeg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jwelsh0311.github.io/ASEC-Christmas-Party-2025/">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="info.html">Menu & Rooms</a>
+</nav>
+
+<div class="snow-container"></div>
+
+<main>
+  <section id="home">  
+
+<div class="flyer-container">
+  <img src="menu.png" alt="ASEC Christmas Party Dinner Menu" class="flyer-main">
+  <br>
+  <img src="room.jpg" alt="Hotel Rooms" class="flyer-main">
+  <p style="color: #fff; font-size:2em; margin:0;">Two Queen, Non Smoking: $75.00</p>
+</div>
+
+ </section>
+</main>
+
+<script>
+const snowContainer = document.querySelector('.snow-container');
+const numberOfSnowflakes = 50; // adjust for heavier or lighter snowfall
+
+for (let i = 0; i < numberOfSnowflakes; i++) {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.textContent = '❄';  // you can use other unicode snowflakes too
+  snowflake.style.left = Math.random() * 100 + 'vw'; // random horizontal position
+  snowflake.style.animationDuration = 5 + Math.random() * 10 + 's'; // random speed
+  snowflake.style.fontSize = 5 + Math.random() * 15 + 'px'; // random size
+  snowContainer.appendChild(snowflake);
+}
+</script>
+
+<footer>
+  <p>© 2026 John Welsh</p>
+</footer>
+
+</body>
+</html>

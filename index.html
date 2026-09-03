@@ -18,12 +18,17 @@
 </head>
 <body>
 
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="info.html">Menu & Rooms</a>
+</nav>
+
 <div class="snow-container"></div>
 
 <header class="site-header">
   <div class="header-container">
     <img src="ASEC.jpg" alt="ASEC Logo" class="logo">
-	<h1 style="color: black; font-size:2em; margin:0;">Christmas Party 2026!</h1>
+	<h1 style="color: #fff; font-size:2em; margin:0;">Christmas Party 2026!</h1>
   </div>
 </header>
 
@@ -41,30 +46,6 @@ style="color:#FFF; font-weight:bold; text-decoration:underline;">
 📍 Get Directions
 </a>
 </p>
-
-<section id="menu" style="text-align:center; margin:10px 0;">
-
-  <div class="tile" style="display:inline-block; max-width:480px; width:90%; margin:0 auto;">
-    <button class="collapsible">View Dinner Menu</button>
-    <div class="content" style="text-align:center;">
-      <ul style="list-style:none; padding-left:0; margin:5px 0;">       
-        <li class="menu-item">Summer Vegetable Pasta Salad</li>
-        <li class="menu-item">BBQ Chicken w/House Dry Rub</li>
-        <li class="menu-item">Smoked Pulled Pork</li>
-        <li class="menu-item">Corn Bread</li>
-		<li class="menu-item">Loaded Potatoes</li>
-        <li class="menu-item">Apple Coleslaw</li>
-        <li class="menu-item">Corn on the Cobb</li>
-		<li class="menu-item">Ranch Style Beans, Bacon</li>
-		<li class="menu-item">Assorted Gourmet Cookies</li>
-		<li class="menu-item">Brownies</li>
-		<li class="menu-item">Coffee Station</li>
-	    <li class="menu-item">Open Bar: Beer, Wine, Liquor</li>
-		<li class="menu-item" style="text-decoration: underline; font-style: italic;">Last Call 8:30PM</li>
-      </ul>
-    </div>
-  </div>
-</section>
 </main>
 
 <!-- Close the previous section (gallery) -->
@@ -77,6 +58,7 @@ style="color:#FFF; font-weight:bold; text-decoration:underline;">
   <div class="rsvp-fields" style="display:flex; justify-content:center; flex-wrap:wrap; gap:5px; margin-bottom:5px;">
     <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required style="flex:1 0 120px; padding:8px; max-width:180px;">
     <input type="text" id="guestName" name="guestName" placeholder="Guest Full Name" style="flex:1 0 120px; padding:8px; max-width:180px;">
+	<input type="text" id="room" name="room" placeholder="Need Room? (Yes/No)" style="flex:1 0 120px; padding:8px; max-width:180px;">
 </div>
 
 <button type="submit" class="rsvp-button">Submit RSVP</button>

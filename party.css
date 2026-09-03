@@ -25,7 +25,7 @@ main {
 }
 
 section {
-  padding: 60px 0; /* equal top and bottom padding for all sections */
+  padding: 20px 0; /* equal top and bottom padding for all sections */
   margin: 0;       /* remove any default margins */
 }
 
@@ -33,7 +33,6 @@ section {
    Header / White strip with logo and nav
 ----------------------------- */
 .site-header {
-  background-color: #fff;
   padding: 2px 10px;
 }
 
@@ -47,11 +46,34 @@ section {
 }
 
 /* -----------------------------
+   Navigation Bar
+----------------------------- */
+.navbar {
+  text-align: left;
+  padding: 8px 0;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 16px;
+  margin: 0 3px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #216A50;
+}
+
+/* -----------------------------
    Flyer Section
 ----------------------------- */
 .flyer-container {
   position: relative;
-  max-width: 900px;
+  max-width: 9000px;
   margin: 0 auto 0px auto;
   text-align: center;
 }
@@ -63,7 +85,7 @@ section {
 
 .flyer-main {
   width: 90%;
-  max-width: 700px;
+  max-width: 1000px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -74,41 +96,6 @@ section {
 .flyer-text {
   margin: 5px 0;
   font-weight: bold;
-}
-
-/* -----------------------------
-   Collapsible Tiles / Gallery
------------------------------ */
-.tile {
-  width: 100%;
-}
-
-.collapsible {
-  width: 100%;
-  background-color: #216A50;
-  color: #fff;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  font-size: 1.1em;
-  transition: background-color 0.3s;
-}
-
-.collapsible:hover {
-  background-color: #8B0000;
-}
-
-.content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 5px;
 }
 
 /* -----------------------------
@@ -181,24 +168,6 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .header-container .logo {
-    width: 80%;
-  }
-
-  .tiles-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-
-  /* Make RSVP fields stack neatly on small screens */
-  @media (max-width: 400px) {
-    .rsvp-fields input {
-      flex: 1 0 90%; /* almost full width on tiny screens */
-      max-width: none;
-    }
-  }
-
 /* Reduce padding specifically for RSVP section */
 #rsvp {
   padding-top: 10px;
@@ -222,6 +191,24 @@ footer {
   background-color: #216A50;
 }
 
+@media screen and (max-width: 480px) {
+  .header-container .logo {
+    width: 80%;
+  }
+
+  .tiles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+  /* Make RSVP fields stack neatly on small screens */
+  @media (max-width: 400px) {
+    .rsvp-fields input {
+      flex: 1 0 90%; /* almost full width on tiny screens */
+      max-width: none;
+    }
+  }
+
 /* Mobile tweak for RSVP spacing */
 @media screen and (max-width: 480px) {
   #rsvp {
@@ -230,51 +217,6 @@ footer {
   }
 }
 
-/* -----------------------------
-   Dinner Menu Section
------------------------------ */
-#menu {
-  margin: 0 !important;
-  padding: 20px 0 !important;
-}
-
-#menu h2 {
-  font-size: 1.6em;
-  color: #FFD700;
-  margin: 2px 0 !important;
-}
-
-#menu .tile {
-  margin: 0 !important;
-}
-
-#menu .content {
-  margin: 0 !important;
-  padding: 0 !important;
-  gap: 3px;
-}
-
-#menu .content ul {
-  padding-left: 0;
-  margin: 2px 0;
-  list-style: none;
-  text-align: center;
-}
-
-#menu .content li {
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 1em;
-  color: #fff;
-  margin: 5px 0;
-}
-
-/* Small screen tweak */
-@media (max-width: 480px) {
-  #menu .tile {
-    max-width: 320px;
-  }
-}
 
 
 
