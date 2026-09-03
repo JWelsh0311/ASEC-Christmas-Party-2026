@@ -139,6 +139,19 @@ footer {
 /* -----------------------------
    Responsive
 ----------------------------- */
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   /* Header */
   .header-container .logo {
