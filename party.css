@@ -140,15 +140,9 @@ footer {
    Responsive
 ----------------------------- */
 
-@media (max-width: 768px) {
-  nav {
-    justify-content: center;
+@media screen and (max-width: 768px) {
+  .navbar {
     text-align: center;
-  }
-
-  nav ul {
-    justify-content: center;
-    padding-left: 0;
   }
 }
 
