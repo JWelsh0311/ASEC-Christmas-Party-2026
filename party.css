@@ -139,14 +139,12 @@ footer {
 /* -----------------------------
    Responsive
 ----------------------------- */
-
 @media screen and (max-width: 768px) {
+  /* Navigation */
   .navbar {
     text-align: center;
   }
-}
-
-@media screen and (max-width: 768px) {
+  
   /* Header */
   .header-container .logo {
     width: 70%;
